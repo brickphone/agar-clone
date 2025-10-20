@@ -29,4 +29,8 @@ export type Virus = Body;
 
 export interface Aabb { x0: number; y0: number; x1: number; y1: number }
 
+export function isCell(b: Body): b is Cell {
+	return 'mass' in b && 'vx' in b && 'vy' in b;
+}
+
 
