@@ -16,11 +16,11 @@ export default function Page() {
 		if (mountRef.current) attachInputListeners(mountRef.current)
 		const world = new World(123)
 		world.createFood(300)
-		const localId = world.createCell(1, 100, 2500, 2500)
+		const localId = world.createCell(1, 500, 2500, 2500)
 		const camera = new Camera()
 		// Initialize camera at player position
 		camera.position = { x: 2500, y: 2500 }
-		camera.setZoomForMass(100)
+		camera.setZoomForMass(500)
 		const renderer = new Renderer()
 		if (canvasRef.current) {
 			renderer.attach(canvasRef.current)

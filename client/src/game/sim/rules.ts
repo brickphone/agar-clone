@@ -6,8 +6,8 @@ export const WORLD = {
 export const PHYSICS = {
 	eatMargin: 0.06,
 	minRadius: 2,
-	maxSpeed: 6,
-	minSpeed: 1.5,
+	maxSpeed: 300,
+	minSpeed: 50,
 	splitCooldownMs: 1000,
 	ejectCooldownMs: 200,
 };
