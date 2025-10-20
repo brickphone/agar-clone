@@ -28,7 +28,9 @@ export class Renderer {
 		const ctx = this.ctx;
 		const { width, height } = this.canvas.getBoundingClientRect();
 
-		ctx.clearRect(0, 0, width, height);
+		// Dark background
+		ctx.fillStyle = '#1a1a1a';
+		ctx.fillRect(0, 0, width, height);
 
 		// world->screen transform
 		ctx.save();

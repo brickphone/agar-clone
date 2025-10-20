@@ -13,8 +13,9 @@ export class Camera {
 
 	setZoomForMass(totalMass: number): void {
 		const minZ = 0.4;
-		const maxZ = 1.5;
-		const z = 1 / Math.max(1, Math.log10(totalMass + 10));
+		const maxZ = 2.0;
+		// Better zoom: smaller cells = more zoom (closer view)
+		const z = 100 / Math.sqrt(totalMass);
 		this.zoom = Math.min(maxZ, Math.max(minZ, z));
 	}
 }

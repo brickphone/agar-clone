@@ -18,9 +18,13 @@ export default function Page() {
 		world.createFood(300)
 		const localId = world.createCell(1, 100, 2500, 2500)
 		const camera = new Camera()
+		// Initialize camera at player position
+		camera.position = { x: 2500, y: 2500 }
+		camera.setZoomForMass(100)
 		const renderer = new Renderer()
 		if (canvasRef.current) {
 			renderer.attach(canvasRef.current)
+			renderer.resize() // Initial resize
 			const onResize = () => renderer.resize()
 			window.addEventListener('resize', onResize)
 			stopRef.current = startLoop(
